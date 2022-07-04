@@ -1,0 +1,773 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "FlightBooking.Admin",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Airline/Add": {
+      "post": {
+        "tags": [
+          "Airline"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/AirlineDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Airline/BlockedAirline": {
+      "get": {
+        "tags": [
+          "Airline"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Airline/List": {
+      "get": {
+        "tags": [
+          "Airline"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Airline/ddlAirline": {
+      "get": {
+        "tags": [
+          "Airline"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/register": {
+      "post": {
+        "tags": [
+          "Authenticate"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Register"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/register - admin": {
+      "post": {
+        "tags": [
+          "Authenticate"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Register"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/login": {
+      "post": {
+        "tags": [
+          "Authenticate"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Login"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Booking/TicketBooking": {
+      "post": {
+        "tags": [
+          "Booking"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/BookingTicketDtos"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Booking/PNrDetails": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "pnrNo",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Booking/CancelTicket": {
+      "get": {
+        "tags": [
+          "Booking"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "pnrNo",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Booking/TicketHistory": {
+      "post": {
+        "tags": [
+          "Booking"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/TicketDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Flight/Add": {
+      "post": {
+        "tags": [
+          "Flight"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Flight"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Flight/SearchFlight": {
+      "post": {
+        "tags": [
+          "Flight"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/SearchFlight"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Flight/List": {
+      "get": {
+        "tags": [
+          "Flight"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Inventory/Add": {
+      "post": {
+        "tags": [
+          "Inventory"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Inventory"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Inventory/Details": {
+      "get": {
+        "tags": [
+          "Inventory"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/PromoCode/CreateCouponCode": {
+      "post": {
+        "tags": [
+          "PromoCode"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/PromoCode"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/PromoCode/CouponCodeList": {
+      "get": {
+        "tags": [
+          "PromoCode"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/PromoCode/DeleteCouponCode": {
+      "get": {
+        "tags": [
+          "PromoCode"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "AirlineDto": {
+      "required": [
+        "address",
+        "isBlocked",
+        "logoUrl",
+        "name",
+        "phone"
+      ],
+      "type": "object",
+      "properties": {
+        "name": {
+          "maxLength": 150,
+          "type": "string"
+        },
+        "logoUrl": {
+          "maxLength": 100,
+          "type": "string"
+        },
+        "phone": {
+          "maxLength": 20,
+          "type": "string"
+        },
+        "address": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "isBlocked": {
+          "type": "boolean"
+        }
+      }
+    },
+    "Register": {
+      "required": [
+        "email",
+        "fullName",
+        "password",
+        "userName"
+      ],
+      "type": "object",
+      "properties": {
+        "fullName": {
+          "type": "string"
+        },
+        "userName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+    "Login": {
+      "required": [
+        "password",
+        "userName"
+      ],
+      "type": "object",
+      "properties": {
+        "userName": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+    "PassengerDto": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "gender": {
+          "type": "string"
+        },
+        "age": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "seatNo": {
+          "type": "string"
+        },
+        "meals": {
+          "type": "string"
+        },
+        "createdBy": {
+          "type": "string"
+        }
+      }
+    },
+    "BookingTicketDtos": {
+      "required": [
+        "isCancel",
+        "isMeals",
+        "totalPrice"
+      ],
+      "type": "object",
+      "properties": {
+        "flightNumber": {
+          "type": "string"
+        },
+        "isMeals": {
+          "type": "boolean"
+        },
+        "totalPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "isCancel": {
+          "type": "boolean"
+        },
+        "createdBy": {
+          "type": "string"
+        },
+        "couponCode": {
+          "type": "string"
+        },
+        "discount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "passenger": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PassengerDto"
+          }
+        }
+      }
+    },
+    "TicketDto": {
+      "type": "object",
+      "properties": {
+        "pnrNumber": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "userId": {
+          "type": "string"
+        }
+      }
+    },
+    "Airline": {
+      "required": [
+        "address",
+        "isBlocked",
+        "logoUrl",
+        "name",
+        "phone"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "maxLength": 50,
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 150,
+          "type": "string"
+        },
+        "logoUrl": {
+          "maxLength": 100,
+          "type": "string"
+        },
+        "phone": {
+          "maxLength": 20,
+          "type": "string"
+        },
+        "address": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "isBlocked": {
+          "type": "boolean"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "createdBy": {
+          "maxLength": 250,
+          "type": "string"
+        },
+        "flights": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Flight"
+          }
+        }
+      }
+    },
+    "Flight": {
+      "required": [
+        "isBlocked",
+        "name"
+      ],
+      "type": "object",
+      "properties": {
+        "flightNumber": {
+          "maxLength": 50,
+          "type": "string"
+        },
+        "airlineNunmber": {
+          "type": "string"
+        },
+        "airlineNo": {
+          "$ref": "#/definitions/Airline"
+        },
+        "name": {
+          "maxLength": 500,
+          "type": "string"
+        },
+        "isBlocked": {
+          "type": "boolean"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "createdBy": {
+          "maxLength": 250,
+          "type": "string"
+        }
+      }
+    },
+    "SearchFlight": {
+      "type": "object",
+      "properties": {
+        "fromPlace": {
+          "type": "string"
+        },
+        "toPlace": {
+          "type": "string"
+        },
+        "startDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "endDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "oneWayTrip": {
+          "type": "boolean"
+        },
+        "roundTrip": {
+          "type": "boolean"
+        }
+      }
+    },
+    "Inventory": {
+      "required": [
+        "bussinessSeats",
+        "endDateTime",
+        "fromPlace",
+        "instrumentUsed",
+        "meals",
+        "nonBussinessSeats",
+        "oneTripPrice",
+        "roundTripPrice",
+        "rowCounts",
+        "scheduledDays",
+        "startDateTime",
+        "toPlace"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "maxLength": 50,
+          "type": "string"
+        },
+        "flightNumber": {
+          "type": "string"
+        },
+        "flightNo": {
+          "$ref": "#/definitions/Flight"
+        },
+        "fromPlace": {
+          "maxLength": 100,
+          "type": "string"
+        },
+        "toPlace": {
+          "maxLength": 100,
+          "type": "string"
+        },
+        "oneTripPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "roundTripPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "startDateTime": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "endDateTime": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "scheduledDays": {
+          "maxLength": 100,
+          "type": "string"
+        },
+        "instrumentUsed": {
+          "maxLength": 100,
+          "type": "string"
+        },
+        "bussinessSeats": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nonBussinessSeats": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "rowCounts": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "meals": {
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "createdBy": {
+          "maxLength": 250,
+          "type": "string"
+        }
+      }
+    },
+    "PromoCode": {
+      "required": [
+        "code",
+        "value"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "maxLength": 50,
+          "type": "string"
+        },
+        "code": {
+          "maxLength": 150,
+          "type": "string"
+        },
+        "value": {
+          "format": "double",
+          "type": "number"
+        }
+      }
+    }
+  }
+}
